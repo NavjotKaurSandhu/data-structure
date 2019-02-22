@@ -126,32 +126,35 @@
 
 ## TypedArray : 
 1. It is used for handling binary data.
-2. Types of binar data :
+2. Types of binary data :
     1. Processing binary data : Manipulating image data in HTML canvas elements, parsing binary files, handling binary network protocols, etc.
     2. Interacting with native APIs : Native API's receive and return data in binary format, which you could neither store nor manipulate well in traditional JavaScript. That meant that whenever you were communicating with such an API, data had to be converted from JavaScript to binary and back, for every call. Eg: WebGL
 3. Two kinds of objects work together in the Typed Array API: 
     * Buffers : Instances of ArrayBuffer hold the binary data.
     * Views : Provide the methods for accessing the binary data. There are two kinds of views:
-        -> An instance of a Typed Array constructor (Uint8Array, Float64Array, etc.) works much like a normal Array, but only allows a single type for its elements and doesn’t have holes.
-        -> An instance of DataView lets you access data at any byte offset in the buffer, and interprets that data as one of several types (Uint8, Float64, etc.).
+         - An instance of a Typed Array constructor (Uint8Array, Float64Array, etc.) works much like a normal Array, but only allows a single type for its elements and doesn’t have holes.
+         - An instance of DataView lets you access data at any byte offset in the buffer, and interprets that data as one of several types (Uint8, Float64, etc.).
 4. Syntax :
-    new TypedArray(); // new in ES2017
-    new TypedArray(length);
-    new TypedArray(typedArray);
-    new TypedArray(object);
-    new TypedArray(buffer [, byteOffset [, length]]);
+   
+   ```
+       new TypedArray(); // new in ES2017
+       new TypedArray(length);
+       new TypedArray(typedArray);
+       new TypedArray(object);
+       new TypedArray(buffer [, byteOffset [, length]]);
 
-    where TypedArray() is one of:
+       where TypedArray() is one of:
 
-    Int8Array();
-    Uint8Array();
-    Uint8ClampedArray();
-    Int16Array();
-    Uint16Array();
-    Int32Array();
-    Uint32Array();
-    Float32Array();
-    Float64Array();
+       Int8Array();
+       Uint8Array();
+       Uint8ClampedArray();
+       Int16Array();
+       Uint16Array();
+       Int32Array();
+       Uint32Array();
+       Float32Array();
+       Float64Array();
+     ```
 
 [`See TypedArray examples here`](src/array/typed-array.js)
 
@@ -167,12 +170,12 @@
 1. A stack is an ordered collection of items that follows the last in, first out (LIFO) principle.
 2. Stack is a linear data structure in which addition or removal of element follows a particular order i.e. LIFO(Last in First Out).
 3. Methods in Stack class:
-   1. push(element(s)): This method adds a new element (or several elements) to the top of the stack.
-   2. pop(): This method removes the top element from the stack. It also returns the removed element.
-   3. peek(): This method returns the top element from the stack. The stack is not modified (it does not remove the element; it only returns the element for information purposes).
-   4. isEmpty(): This method returns true if the stack does not contain any elements, and false if the size of the stack is bigger than 0.
-   5. clear(): This method removes all the elements of the stack.
-   6. size(): This method returns the number of elements that the stack contains. It is similar to the length property of an array
+   * push(element(s)): This method adds a new element (or several elements) to the top of the stack.
+   * pop(): This method removes the top element from the stack. It also returns the removed element.
+   * peek(): This method returns the top element from the stack. The stack is not modified (it does not remove the element; it only returns the element for information purposes).
+   * isEmpty(): This method returns true if the stack does not contain any elements, and false if the size of the stack is bigger than 0.
+   * clear(): This method removes all the elements of the stack.
+   * size(): This method returns the number of elements that the stack contains. It is similar to the length property of an array
 
 [`See Stack examples here`](src/stack/stack-array.js) [`and here`](src/stack/stack.js)
 
@@ -210,7 +213,7 @@
 [`See WeakMap examples here`](src/stack/stack-weak-map.js) [`and here`](src/weak-map.js)
 
 ## WeakMap vs Map :
-1. how the objects that are used as keys are treated during garbage collection.
+1. How the objects that are used as keys are treated during garbage collection.
 2. Without the Maps, running delete window.obj would remove the only reference to the obj object, and the object would be removed from memory.
 3. However, since obj is used as a key in our Map there still is a reference to obj and it can’t be garbage collected.
 4. They only hold a weak reference to obj, meaning that after running removing the obj reference from the window object, obj can be garbage collected.
@@ -232,25 +235,25 @@
 ## Queue :
 1. A queue is an ordered collection of items that follows the first in, first out (FIFO), also known as the first come, first served, principle.
 2. Eg: movies, the cafeteria, and a checkout line at a grocery store 
-Methods in Queue:
-1. enqueue(element): This method adds a new element at the back of the queue.
-2. dequeue(): This method removes the first element from the queue (the item that is in the front of the queue). It also returns the removed element.
-3. peek(): This method returns the first element from the queue, the first one added, and the first one that will be removed from the queue. The queue is not modified (it does not remove the element; it only returns the element for information purposes - very similar to the peek method from the Stack class). This method also works as the front method, as it is known in other languages. 
-4. isEmpty(): This method returns true if the queue does not contain any elements, and false if the queue size is bigger than 0.
-5. size(): This method returns the number of elements the queue contains. It is similar to the length property of the array.
+3. Methods in Queue:
+   * enqueue(element): This method adds a new element at the back of the queue.
+   * dequeue(): This method removes the first element from the queue (the item that is in the front of the queue). It also returns the removed element.
+   * peek(): This method returns the first element from the queue, the first one added, and the first one that will be removed from the queue. The queue is not modified (it does not remove the element; it only returns the element for information purposes - very similar to the peek method from the Stack class). This method also works as the front method, as it is known in other languages. 
+   * isEmpty(): This method returns true if the queue does not contain any elements, and false if the queue size is bigger than 0.
+   * size(): This method returns the number of elements the queue contains. It is similar to the length property of the array.
 
 [`See Queue examples here`](src/queue/queue.js)
 
 # DeQueue: 
 1. The deque data structure, also known as the double-ended queue, is a special queue that allows us to insert and remove elements from the end or from the front of the queue. 
 2. Eg: Movie theaters, Cafeterias, and so on.
-Methods for DeQueue:
-1. addFront(element): This method adds a new element at the front of the deque
-2. addBack(element): This method adds a new element at the back of the deque (same implementation as the enqueue method from the Queue class)
-3. removeFront(): This method removes the first element from the deque (the same implementation as the dequeue method from the Queue class)
-4. removeBack(): This method removes the last element from the deque (the same implementation as the pop method from the Stack class)
-5. peekFront(): This method returns the first element from the deque (the same implementation as the peek method from the Queue class)
-6. peekBack(): This method returns the last element from the deque (the same implementation as the peek method from the Stack class)
+3. Methods for DeQueue:
+   * addFront(element): This method adds a new element at the front of the deque
+   * addBack(element): This method adds a new element at the back of the deque (same implementation as the enqueue method from the Queue class)
+   * removeFront(): This method removes the first element from the deque (the same implementation as the dequeue method from the Queue class)
+   * removeBack(): This method removes the last element from the deque (the same implementation as the pop method from the Stack class)
+   * peekFront(): This method returns the first element from the deque (the same implementation as the peek method from the Queue class)
+   * peekBack(): This method returns the last element from the deque (the same implementation as the peek method from the Stack class)
 
 [`See DeQueue examples here`](src/queue/dequeue.js) 
 [`See Hot Potato Game with Circular Queue examples here`](src/queue/circular-hot-potato-game.js) 
@@ -275,9 +278,9 @@ Methods for DeQueue:
     }
     ```
 6. Different types of Linked List:
-   1. Singly linked list : 
-      * Each node only has reference to the node after it or the next node.
-      * Methods of Single Linked List:
+   * Singly linked list : 
+      - Each node only has reference to the node after it or the next node.
+      - Methods of Single Linked List:
          * push(element): This method adds a new element to the end of the list.
          * insert(element, position): This method inserts a new element at a specified position in the list.
          * getElementAt(index): This method returns the element of a specific position in the list. If the element does not exist in the list, it returns undefined.
@@ -288,27 +291,30 @@ Methods for DeQueue:
          * size(): This method returns the number of elements the linked list contains. It is similar to the length property of the array.
          * toString(): This method returns a string representation of the linked list. As the list uses a Node class as an element, we need to overwrite the default toString method inherited from the JavaScript Object class to output only the element values.
 
-[`See Single Linked List examples here`](src/linked-list/single-linked-list.js) 
+   [`See Single Linked List examples here`](src/linked-list/single-linked-list.js) 
 
-   2. Double linked list : 
-      * Each node has a reference to the next node but it also has a reference to the one before it as well or the previous node.
+   * Double linked list : 
+      - Each node has a reference to the next node but it also has a reference to the one before it as well or the previous node.
 
-[`See Double Linked List examples here`](src/linked-list/doubly-linked-list.js) 
+   [`See Double Linked List examples here`](src/linked-list/doubly-linked-list.js) 
 
-   3. Circular linked list : 
-      * A circular linked list can have only one reference direction (as with a linked list) or a double reference (as with a doubly linked list). The only difference between a circular linked list and a linked list is that the last element's next (tail.next) pointer does not make a reference to undefined, but to the first element (head).
+   * Circular linked list : 
+      - A circular linked list can have only one reference direction (as with a linked list) or a double reference (as with a doubly linked list). The only difference between a circular linked list and a linked list is that the last element's next (tail.next) pointer does not make a reference to undefined, but to the first element (head).
 
-[`See Circular Linked List examples here`](src/linked-list/circular-linked-list.js) 
+   [`See Circular Linked List examples here`](src/linked-list/circular-linked-list.js) 
 
-   4. Doubly linked list : A doubly circular linked list has tail.next pointing to the head element, and head.prev pointing to the tail element.
+   * Doubly linked list : 
+      - A doubly circular linked list has tail.next pointing to the head element, and head.prev pointing to the tail element.
 
-   5. Sorted linked list : A sorted linked list is a list that keeps its elements sorted. To keep all elements sorted, instead of applying a sorting algorithm, we will insert the element at its correct position so as to keep the list always sorted.
+   * Sorted linked list : 
+      - A sorted linked list is a list that keeps its elements sorted. 
+      - To keep all elements sorted, instead of applying a sorting algorithm, we will insert the element at its correct position so as to keep the list always sorted.
 
-[`See Sorted Linked List examples here`](src/linked-list/sorted-linked-list.js.js) 
+   [`See Sorted Linked List examples here`](src/linked-list/sorted-linked-list.js.js) 
 
-6. Stack linked list : 
+   * Stack linked list : 
 
-[`See Stack Linked List examples here`](src/linked-list/stack-linked-list.js.js) 
+   [`See Stack Linked List examples here`](src/linked-list/stack-linked-list.js.js) 
 
 ## Big O Notation : 
 1. It is a notation used to classify how scable function or algorithm is.
@@ -346,29 +352,32 @@ Methods for DeQueue:
     N = {0, 1, 2, 3, 4, 5, 6, ..}
 5. A set with no element is called a null set or an empty set. An example would be a set of prime numbers between 24 and 29. Since there is no prime number (a natural number greater than 1 that has no positive divisors other than 1 and itself) between 24 and 29, the set will be empty. We will represent an empty set with { }. 
 6. Methods of Sets:
-   1. add(element): This adds a new element to the set.
-   2. delete(element): This removes the element from the set.
-   3. has(element): This returns true if the element exists in the set and false otherwise.
-   4. clear(): This removes all the elements from the set.
-   5. size(): This returns how many elements the set contains. It is similar to the length property of an array.
-   6. values(): This returns an array of all the values (elements) of the set.
+   * add(element): This adds a new element to the set.
+   * delete(element): This removes the element from the set.
+   * has(element): This returns true if the element exists in the set and false otherwise.
+   * clear(): This removes all the elements from the set.
+   * size(): This returns how many elements the set contains. It is similar to the length property of an array.
+   * values(): This returns an array of all the values (elements) of the set.
 7. Operations in Sets:
-   1. Union: 
-       -> Given two sets, this returns a new set of elements from both of the given sets.
-       -> The union of sets A and B is denoted by:
-           A ⋃ B
-       -> And is defined as:
-           A ⋃ B = x ∣ x ∊ A ⋁ x ∊ B
-           ∊ : 
-           => Set membership In mathematics, an element, or member, of a set is any one of the distinct objects that make up that set.
-           ⋁ :
-           => or is the truth-functional operator of (inclusive) disjunction, also known as alternation; the or of a set of operands is true if and only if one or more of its operands is true. The logical connective that represents this operator is typically written as ∨ or +.
-           ∣ :
-           => Such that
+   * Union: 
+       - Given two sets, this returns a new set of elements from both of the given sets.
+       - The union of sets A and B is denoted by:
+           
+           ```
+            A ⋃ B
+           ```
+       - And is defined as:
+           
+           ```
+            A ⋃ B = x ∣ x ∊ A ⋁ x ∊ B
+           ```
+        - Where ∊ : Set membership In mathematics, an element, or member, of a set is any one of the distinct objects that make up that set.
+           ⋁ : or is the truth-functional operator of (inclusive) disjunction, also known as alternation; the or of a set of operands is true if and only if one or more of its operands is true. The logical connective that represents this operator is typically written as ∨ or +.
+           ∣ : Such that
 
-   2. Intersection: Given two sets, this returns a new set with the elements that exist in both sets
-   3. Difference: Given two sets, this returns a new set with all the elements that exist in the first set and do not exist in the second set
-   4. Subset: This confirms whether a given set is a subset of another set
+   * Intersection: Given two sets, this returns a new set with the elements that exist in both sets
+   * Difference: Given two sets, this returns a new set with all the elements that exist in the first set and do not exist in the second set
+   * Subset: This confirms whether a given set is a subset of another set
 
 [`See Sets examples here`](src/sets/sets.js) 
 
@@ -376,9 +385,9 @@ Methods for DeQueue:
 1. It is a collection of nodes that are all connected together in a certain way each node in a binary search tree you will have up to 2 child nodes left node and right node.
    * All the left nodes will be lesser and equal value then their parent node.
    * All the right node will be greater value than their parent node.
-2. Following are the traversal :
-   1. Depth First Traversal : We will start at the top and follow each branch all the way down to its bottom.
-   2. Breadth First Traversal : We will also start at the top but we will go across each level before moving down to next level.
+2. Following are the traversal types :
+   * Depth First Traversal : We will start at the top and follow each branch all the way down to its bottom.
+   * Breadth First Traversal : We will also start at the top but we will go across each level before moving down to next level.
 
 ## Recursion : 
 1. When function call itself again and again.
