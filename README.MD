@@ -1,5 +1,3 @@
-############# See data-structure folder ###########
-
 # What is Data Structure :
 1. A way of organizing data that is stored in a computer or database
 2. Many different types of data stuctures
@@ -23,35 +21,46 @@
 
 # Constructor Function : 
 1. It is simply a function that creates an object class and allows you to create multiple instance of that class very easily.
-function User(firstName, lastName, age, gender) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-    this.gender = gender;
-}
-var user1 = new User('Nav', 'K', 24, 'female');
-var user200 = new User('Nav11', 'K11', 25, 'female');
+    
+    ```function User(firstName, lastName, age, gender) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.gender = gender;
+    }
+    var user1 = new User('Nav', 'K', 24, 'female');
+    var user200 = new User('Nav11', 'K11', 25, 'female');
+    ```
 
-# Prototype : It simply an object that multiple other objects that can refer to get any information or functionlaity that they need.
-User.prototype.emailDomain = '@facebook.com';
-User.prototype.getEmailAddress = function() {
-    return this.firstName + this.lastName + this.emailDomain;
-}
+# Prototype : 
+1. It simply an object that multiple other objects that can refer to get any information or functionlaity that they need.
+    
+    ```User.prototype.emailDomain = '@facebook.com';
+    User.prototype.getEmailAddress = function() {
+        return this.firstName + this.lastName + this.emailDomain;
+    }
+    ```
 
 # Arrays : 
 1. An array stores values that are all of the same datatype sequentially. 
 2. Although JavaScript allows us to create arrays with values from different datatypes
 Ways to create and initialize arrays :
 1. let daysOfWeek = new Array();
-    daysOfWeek = new Array(7); // Fix the size of array
+    
+    ```daysOfWeek = new Array(7); // Fix the size of array
     daysOfWeek = new Array('S', 'M', 'T', 'W', 'TH', 'F', 'SA'); // Initializing values
+    ```
 2. let daysOfWeek = [];
-    daysOfWeek = ['S', 'M', 'T', 'W', 'TH', 'F', 'SA'];
+    
+    ```daysOfWeek = ['S', 'M', 'T', 'W', 'TH', 'F', 'SA'];
+    ```
 
 JavaScript only supports one-dimensional arrays; it does not support matrices. However, we can implement matrices or any multi-dimensional array using an array of arrays:
-    let averageTemp = []; 
+    
+    ```let averageTemp = []; 
     averageTemp[0] = [72, 75, 79, 79, 81, 81]; 
-    averageTemp[1] = [81, 79, 75, 75, 73, 73]; 
+    averageTemp[1] = [81, 79, 75, 75, 73, 73];
+    ```
 
 * Adding element into an array 
     -> push : insert element at the end of an array
@@ -118,9 +127,11 @@ See array.js
 
 See array.js
 
-# TypedArray : It is used for handling binary data.
-1. Processing binary data : Manipulating image data in HTML canvas elements, parsing binary files, handling binary network protocols, etc.
-2. Interacting with native APIs : Native API's receive and return data in binary format, which you could neither store nor manipulate well in traditional JavaScript. That meant that whenever you were communicating with such an API, data had to be converted from JavaScript to binary and back, for every call. Eg: WebGL
+# TypedArray : 
+1. It is used for handling binary data.
+2. Types of binar data :
+    1. Processing binary data : Manipulating image data in HTML canvas elements, parsing binary files, handling binary network protocols, etc.
+    2. Interacting with native APIs : Native API's receive and return data in binary format, which you could neither store nor manipulate well in traditional JavaScript. That meant that whenever you were communicating with such an API, data had to be converted from JavaScript to binary and back, for every call. Eg: WebGL
 3. Two kinds of objects work together in the Typed Array API: 
     * Buffers : Instances of ArrayBuffer hold the binary data.
     * Views : Provide the methods for accessing the binary data. There are two kinds of views:
@@ -177,9 +188,10 @@ See stack-array.js, stack.js
 6. Symbols primary use case is for making private object properties, which can be only of type String or Symbol.
 7. Using Symbols for object properties is handy for hiding certain properties that might name clash with other libraries.
 8. So, they're not entirely private, but they are skipped in common iteration cycles.
-    Eg: 
-    Object.getOwnPropertySymbols(foo) // Symbol()
+    
+    ```Object.getOwnPropertySymbols(foo) // Symbol()
     Reflect.ownKeys(foo) // Symbol()
+    ```
 
 See stack-symbols.js, symbol.js
 
@@ -208,14 +220,16 @@ See stack-weak-map.js
 
 See weak-map.js
 
-# Field or Field Proposal : We will be able to declare private properties by prefixing the properties with the hash symbol (#).
-
-    class Stack {
+# Field or Field Proposal : 
+1. We will be able to declare private properties by prefixing the properties with the hash symbol (#).
+    
+    ```class Stack {
         #count = 0;
         #items = 0;
 
         // stack methods
     }
+    ```
 
 # Queue :
 1. A queue is an ordered collection of items that follows the first in, first out (FIFO), also known as the first come, first served, principle.
@@ -226,13 +240,14 @@ Methods in Queue:
 3. peek(): This method returns the first element from the queue, the first one added, and the first one that will be removed from the queue. The queue is not modified (it does not remove the element; it only returns the element for information purposes - very similar to the peek method from the Stack class). This method also works as the front method, as it is known in other languages. 
 4. isEmpty(): This method returns true if the queue does not contain any elements, and false if the queue size is bigger than 0.
 5. size(): This method returns the number of elements the queue contains. It is similar to the length property of the array.
-
-        Dequeue
+        
+        ```Dequeue
         <----
         Front                   End
         _______   _______   _______
 <----- | John  | | Jack  | | Camila| <-----
        |_______| |_______| |_______|
+       ```
 
 See queue.js
 
@@ -286,7 +301,8 @@ See sorted-linked-list.js
 6. Stack linked list : 
 
 JS Object looks like:
-    LinkedList = {
+    
+    ```LinkedList = {
         head: points to head of LL,
         tail: points to tail of LL
     }
@@ -295,6 +311,7 @@ JS Object looks like:
         next: nextNode,
         prev: prevNode
     }
+    ```
 
 # Big O Notation : 
 1. It is a notation used to classify how scable function or algorithm is.
@@ -362,12 +379,14 @@ See sets.js
 2. Breadth First Traversal : We will also start at the top but we will go across each level before moving down to next level.
 
 # Recursion : When function itself again.
-function func() {
-    if (somecondition) {
-        return something;
-    } else {
-        func();
+    
+    ```function func() {
+        if (somecondition) {
+            return something;
+        } else {
+            func();
+        }
     }
-}
+    ```
 
 # Callstack : It represents what order out functions are being called in and what variables they're being called with.
