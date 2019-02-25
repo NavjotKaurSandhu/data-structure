@@ -32,4 +32,4 @@
        Float64Array();
      ```
 
-[`See TypedArray examples here`](src/array/typed-array.js)
+[`See TypedArray examples here`](../src/array/typed-array.js)

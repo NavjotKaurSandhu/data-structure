@@ -79,4 +79,4 @@
             * While Array.of(5) creates a new array with a single element, 5, and a length property of 1, Array(5) creates a new empty array with 5 empty slots and a length property of 5.
         - copyWithin : (Available in ES2015 or ES6) : It copies a sequence of values of the array into the position of a start index.
 
-[`See Array examples here`](src/array/array.js)
+[`See Array examples here`](../src/array/array.js)

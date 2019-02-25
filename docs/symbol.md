@@ -14,4 +14,4 @@
     Reflect.ownKeys(foo) // Symbol()
     ```
     
-[`See Symbol examples here`](src/stack/stack-symbols.js) [`and here`](src/symbol.js)
+[`See Symbol examples here`](../src/stack/stack-symbols.js) [`and here`](../src/symbol.js)

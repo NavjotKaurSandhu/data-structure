@@ -9,4 +9,4 @@
    * isEmpty(): This method returns true if the queue does not contain any elements, and false if the queue size is bigger than 0.
    * size(): This method returns the number of elements the queue contains. It is similar to the length property of the array.
 
-[`See Queue examples here`](src/queue/queue.js)
+[`See Queue examples here`](../src/queue/queue.js)

@@ -32,17 +32,17 @@
          * size(): This method returns the number of elements the linked list contains. It is similar to the length property of the array.
          * toString(): This method returns a string representation of the linked list. As the list uses a Node class as an element, we need to overwrite the default toString method inherited from the JavaScript Object class to output only the element values.
 
-   [`See Single Linked List examples here`](src/linked-list/single-linked-list.js) 
+   [`See Single Linked List examples here`](../src/linked-list/single-linked-list.js) 
 
    * Double linked list : 
       - Each node has a reference to the next node but it also has a reference to the one before it as well or the previous node.
 
-   [`See Double Linked List examples here`](src/linked-list/doubly-linked-list.js) 
+   [`See Double Linked List examples here`](../src/linked-list/doubly-linked-list.js) 
 
    * Circular linked list : 
       - A circular linked list can have only one reference direction (as with a linked list) or a double reference (as with a doubly linked list). The only difference between a circular linked list and a linked list is that the last element's next (tail.next) pointer does not make a reference to undefined, but to the first element (head).
 
-   [`See Circular Linked List examples here`](src/linked-list/circular-linked-list.js) 
+   [`See Circular Linked List examples here`](../src/linked-list/circular-linked-list.js) 
 
    * Doubly linked list : 
       - A doubly circular linked list has tail.next pointing to the head element, and head.prev pointing to the tail element.
@@ -51,11 +51,11 @@
       - A sorted linked list is a list that keeps its elements sorted. 
       - To keep all elements sorted, instead of applying a sorting algorithm, we will insert the element at its correct position so as to keep the list always sorted.
 
-   [`See Sorted Linked List examples here`](src/linked-list/sorted-linked-list.js.js) 
+   [`See Sorted Linked List examples here`](../src/linked-list/sorted-linked-list.js.js) 
 
    * Stack linked list : 
 
-   [`See Stack Linked List examples here`](src/linked-list/stack-linked-list.js.js) 
+   [`See Stack Linked List examples here`](../src/linked-list/stack-linked-list.js.js) 
 
 
 ## Few practical use cases for Linked List

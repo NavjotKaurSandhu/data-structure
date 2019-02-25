@@ -10,4 +10,4 @@
    * clear(): This method removes all the elements of the stack.
    * size(): This method returns the number of elements that the stack contains. It is similar to the length property of an array
 
-[`See Stack examples here`](src/stack/stack-array.js) [`and here`](src/stack/stack.js)
+[`See Stack examples here`](../src/stack/stack-array.js) [`and here`](../src/stack/stack.js)

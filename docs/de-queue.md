@@ -10,6 +10,6 @@
    * peekFront(): This method returns the first element from the deque (the same implementation as the peek method from the Queue class)
    * peekBack(): This method returns the last element from the deque (the same implementation as the peek method from the Stack class)
 
-[`See DeQueue examples here`](src/queue/dequeue.js) 
-[`See Hot Potato Game with Circular Queue examples here`](src/queue/circular-hot-potato-game.js) 
-[`See Palindrome Checker with DeQueue examples here`](src/queue/de-queue-palindrome-checker.js) 
+[`See DeQueue examples here`](../src/queue/dequeue.js) 
+[`See Hot Potato Game with Circular Queue examples here`](../src/queue/circular-hot-potato-game.js) 
+[`See Palindrome Checker with DeQueue examples here`](../src/queue/de-queue-palindrome-checker.js) 
