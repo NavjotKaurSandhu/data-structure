@@ -8,10 +8,10 @@
 3. Some are fasr at searching and retrieving data while others are not.
 
 ## Why are data structures important to know?
-1. Can have big impact on how performant, quick and efficiently a program runs.
+1. Can have big impact on how performant, quick and efficiently a program runs. Example :
     * In case if you want to store data in database but don't want to retrieve it then Linked List is the best example which is really fast at recording data even though it's not fast at retrieving that data.
     * In case if you want to access data, we can use Hash Table.
-2. Reinforce knowledge of JS algorithm and other important concepts.
+2. Reinforce knowledge of JS algorithm and other important concepts like :
     * Constructor Functions
     * Recursion
     * This Keyword
