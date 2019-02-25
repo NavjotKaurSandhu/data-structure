@@ -1,4 +1,4 @@
-# DeQueue:
+## DeQueue:
 
 1. The deque data structure, also known as the double-ended queue, is a special queue that allows us to insert and remove elements from the end or from the front of the queue. 
 2. Eg: Movie theaters, Cafeterias, and so on.

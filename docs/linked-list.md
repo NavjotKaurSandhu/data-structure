@@ -1,5 +1,5 @@
 
-# Linked List :
+## Linked List :
 
 1. It is a list of elements called nodes that are connected together or linked together in a single file line.
 2. The first example is a conga line. Each person is an element, and the hands would be the pointer that links to the next person in the conga line. You can add people to the line—you just need to find the spot where you want to add the person, decouple the connection, then insert the new person and make the connection again.
