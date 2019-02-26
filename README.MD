@@ -1,13 +1,13 @@
 ## What is Data Structure :
-1. A way of organizing data that is stored in a computer or database
+1. A way of organizing data that is stored in a computer or database.
 2. Each type of data structure represents a different way of organizing the data.
 
-## Why are there different types of DS :
+## Why there are different types of DS exists :
 1. They all have different strengths and weaknesses.
 2. Some are fast at stroing and recording data while others are not.
-3. Some are fasr at searching and retrieving data while others are not.
+3. Some are fast at searching and retrieving data while others are not.
 
-## Why are data structures important to know?
+## Why data structure are important to know?
 1. Can have big impact on how performant, quick and efficiently a program runs. Example :
     * In case if you want to store data in database but don't want to retrieve it then Linked List is the best example which is really fast at recording data even though it's not fast at retrieving that data.
     * In case if you want to access data, we can use Hash Table.
@@ -54,11 +54,11 @@
 8. [`Linked List`](docs/linked-list.md)
 9. [`Sets`](docs/sets.md)
 
-## forEach vs filter
+## ForEach vs Filter
 1. The main difference between forEach and filter is that forEach just loop over the array and executes the callback but filter executes the callback and check its return value.
-2. (filter) If the value is true element remains in the resulting array but if the return value is false the element will be removed for the resulting array.
+2. In filter if the value is true element remains in the resulting array but if the return value is false the element will be removed for the resulting array.
 
-## find vs findIndex
+## Find vs FindIndex
 1. The find method returns the first value of the array that satisfies the proposed condition. 
 2. The findIndex method, on the other hand, returns the index of the first value of the array that satisfies the condition.
 
@@ -68,11 +68,16 @@
 3. Symbol.for(key) : creates a Symbol in a “global Symbol registry”.
 
 ## WeakMap vs Map :
-1. How the objects that are used as keys are treated during garbage collection.
-2. Without the Maps, running delete window.obj would remove the only reference to the obj object, and the object would be removed from memory.
-3. However, since obj is used as a key in our Map there still is a reference to obj and it can’t be garbage collected.
-4. They only hold a weak reference to obj, meaning that after running removing the obj reference from the window object, obj can be garbage collected.
+1. The difference between Map and WeakMap lies in how the objects that are used as keys are treated during garbage collection.
+2. In Map, the array of keys would keep references to key objects, preventing them from being garbage collected. In native WeakMaps, references to key objects are held "weakly", which means that they do not prevent garbage collection in case there would be no other reference to the object.
+3. Without the Map, running delete window.obj would remove the only reference to the object, and the object would be removed from memory. However, since obj is used as a key in our Map there still is a reference to obj and it can’t be garbage collected.
+4. WeakMaps however are different: they act as if there was no additional reference to obj. They only hold a weak reference to obj, meaning that after running removing the obj reference from the window object, obj can be garbage collected.
 5. Map allows for arbitrarily named keys where as Weakmap keys are an object which can be either {} or function() {} because function inherit from object.
+6. In other words, Key in Map can be anything but Key in WeakMap must be of type Object (not null).
+7. Map has size but WeakMap has length.
+8. In Map we can use forEach() for iterating but not in WeakMap.
+
+[`See WeakMap vs Map example`](src/weak-map.js)
 
 ## Field or Field Proposal : 
 1. We will be able to declare private properties by prefixing the properties with the hash symbol (#).
@@ -86,6 +91,8 @@
         // stack methods
     }
     ```
+    
+ [`Find more detail`](http://2ality.com/2017/07/class-fields.html)
 
 ## Big O Notation : 
 1. It is a notation used to classify how scable function or algorithm is.
