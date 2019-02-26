@@ -77,6 +77,8 @@
 7. Map has size but WeakMap has length.
 8. In Map we can use forEach() for iterating but not in WeakMap.
 
+**NOTE: If you run below example in Chrome we can check the difference of memory in DevTools under profiles.**
+
 [`See WeakMap vs Map example`](src/weak-map.js)
 
 ## Field or Field Proposal : 
