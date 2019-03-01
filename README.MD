@@ -43,58 +43,13 @@
     }
     ```
 
-## Some of important topics :
+## Different types of data structure :
 1. [`Arrays`](docs/arrays.md)
-2. [`TypedArray`](docs/typed-array.md)
-3. [`Stack`](docs/stack.md)
-4. [`Symbol`](docs/symbol.md)
-5. [`WeekMap`](docs/week-map.md)
-6. [`Queue`](docs/queue.md)
-7. [`DeQueue`](docs/de-queue.md)
-8. [`Linked List`](docs/linked-list.md)
-9. [`Sets`](docs/sets.md)
-
-## ForEach vs Filter
-1. The main difference between forEach and filter is that forEach just loop over the array and executes the callback but filter executes the callback and check its return value.
-2. In filter if the value is true element remains in the resulting array but if the return value is false the element will be removed for the resulting array.
-
-## Find vs FindIndex
-1. The find method returns the first value of the array that satisfies the proposed condition. 
-2. The findIndex method, on the other hand, returns the index of the first value of the array that satisfies the condition.
-
-## Global Symbols
-1. It is not unique but they do have a purpose.
-2. You can use the Symbol.for(key) method to both create and access Global Symbols.
-3. Symbol.for(key) : creates a Symbol in a “global Symbol registry”.
-
-## WeakMap vs Map :
-1. The difference between Map and WeakMap lies in how the objects that are used as keys are treated during garbage collection.
-2. In Map, the array of keys would keep references to key objects, preventing them from being garbage collected. In native WeakMaps, references to key objects are held "weakly", which means that they do not prevent garbage collection in case there would be no other reference to the object.
-3. Without the Map, running delete window.obj would remove the only reference to the object, and the object would be removed from memory. However, since obj is used as a key in our Map there still is a reference to obj and it can’t be garbage collected.
-4. WeakMaps however are different: they act as if there was no additional reference to obj. They only hold a weak reference to obj, meaning that after running removing the obj reference from the window object, obj can be garbage collected.
-5. Map allows for arbitrarily named keys where as Weakmap keys are an object which can be either {} or function() {} because function inherit from object.
-6. In other words, Key in Map can be anything but Key in WeakMap must be of type Object (not null).
-7. Map has size but WeakMap has length.
-8. In Map we can use forEach() for iterating but not in WeakMap.
-
-**NOTE: If you run below example in Chrome we can check the difference of memory in DevTools under profiles.**
-
-[`See WeakMap vs Map example`](src/weak-map.js)
-
-## Field or Field Proposal : 
-1. We will be able to declare private properties by prefixing the properties with the hash symbol (#).
-    
-    ```
-    class Stack {
-    
-        #count = 0;
-        #items = 0;
-
-        // stack methods
-    }
-    ```
-    
- [`Find more detail`](http://2ality.com/2017/07/class-fields.html)
+2. [`Stack`](docs/stack.md)
+3. [`Queue`](docs/queue.md)
+4. [`DeQueue`](docs/de-queue.md)
+5. [`Linked List`](docs/linked-list.md)
+6. [`Sets`](docs/sets.md)
 
 ## Big O Notation : 
 1. It is a notation used to classify how scable function or algorithm is.
@@ -117,6 +72,9 @@
    ```
 **NOTE: In case of search, there will some scenario where we need to iterate over the whole linked list.So the Linked List size will grow and our search iteration increases.**
 
+6. Big O Notation implementation :
+    * [`Big O Notation`](src/big-o-notation/big-o-notation.js)
+
 ## Binary Tree : 
 1. It is a collection of nodes that are all connected together in a certain way each node in a binary search tree you will have up to 2 child nodes left node and right node.
    * All the left nodes will be lesser and equal value then their parent node.
@@ -124,19 +82,3 @@
 2. Following are the traversal types :
    * Depth First Traversal : We will start at the top and follow each branch all the way down to its bottom.
    * Breadth First Traversal : We will also start at the top but we will go across each level before moving down to next level.
-
-## Recursion : 
-1. When function call itself again and again.
-    
-    ```
-    function func() {
-        if (somecondition) {
-            return something;
-        } else {
-            func();
-        }
-    }
-    ```
-
-## Callstack : 
-1. It represents what order out functions are being called in and what variables they're being called with.

@@ -33,5 +33,5 @@
    * Intersection: Given two sets, this returns a new set with the elements that exist in both sets
    * Difference: Given two sets, this returns a new set with all the elements that exist in the first set and do not exist in the second set
    * Subset: This confirms whether a given set is a subset of another set
-
-[`See Sets examples here`](../src/sets/sets.js) 
+8. Sets implementations :
+    * [`Sets`](../src/sets/sets.js) 
