@@ -52,11 +52,11 @@
       - A sorted linked list is a list that keeps its elements sorted. 
       - To keep all elements sorted, instead of applying a sorting algorithm, we will insert the element at its correct position so as to keep the list always sorted.
 
-   [`Sorted Linked List`](../src/linked-list/sorted-linked-list.js.js) 
+   [`Sorted Linked List`](../src/linked-list/sorted-linked-list.js) 
 
    * Stack linked list : 
 
-   [`Stack Linked List`](../src/linked-list/stack-linked-list.js.js) 
+   [`Stack Linked List`](../src/linked-list/stack-linked-list.js) 
 
 ## Few practical use cases for Linked List
     - Online gaming
