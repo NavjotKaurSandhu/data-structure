@@ -2,7 +2,7 @@
 ## Arrays :
 
 1. An array stores values that are all of the same datatype sequentially. 
-2. Although JavaScript allows us to create arrays with values from different datatypes
+2. Although JavaScript allows us to create arrays with values from different datatypes.
 3. Ways to create and initialize arrays :
     * Using new keyword :
     
@@ -18,7 +18,7 @@
         daysOfWeek = ['S', 'M', 'T', 'W', 'TH', 'F', 'SA'];
         ```
 4. JavaScript only supports one-dimensional arrays. 
-5. It does not support matrices. However, we can implement matrices or any multi-dimensional array using an array of arrays :
+5. JavaScript does not support matrices. However, we can implement matrices or any multi-dimensional array using an array of arrays :
     
     ```
     let averageTemp = []; 
@@ -27,15 +27,15 @@
     ```
 5. Operation performed on array :
     * Adding element into an array :
-        - push : Insert element at the end of an array
-        - unshift : Insert element in the begining of an array
-        - splice : Insert element in specific position in an array
+        - push : Insert element at the end of an array.
+        - unshift : Insert element in the begining of an array.
+        - splice : Insert element in specific position in an array.
     * Removing element from an array :
-        - pop : Remove element from the end of an array
-        - shift : Remove element from the beginning of an array
-        - splice : Remove element in specific position in an array
+        - pop : Remove element from the end of an array.
+        - shift : Remove element from the beginning of an array.
+        - splice : Remove element in specific position in an array.
     * Joining multiple arrays
-        - concat : join two arrays
+        - concat : Join two arrays.
     * Sorting elements
         - reverse
         - sort
@@ -78,5 +78,5 @@
             * Array.of() and array is in how they handle a single integer argument passed to them.
             * While Array.of(5) creates a new array with a single element, 5, and a length property of 1, Array(5) creates a new empty array with 5 empty slots and a length property of 5.
         - copyWithin : (Available in ES2015 or ES6) : It copies a sequence of values of the array into the position of a start index.
-
-[`See Array examples here`](../src/array/array.js)
+6. Array implementations :
+    * [`Array`](../src/array/array.js)
